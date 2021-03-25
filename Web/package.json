@@ -1,0 +1,35 @@
+{
+  "name": "rilievi-e-perizie",
+  "version": "1.0.0",
+  "description": "Stefirca Rilievi_e_Perizie",
+  "main": "server.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cloudinary": "^1.25.1",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "md5": "^2.3.0",
+    "mongodb": "^3.6.5",
+    "nodemailer": "^6.5.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.heroku.com/stefirca-rilievi-e-perizie.git"
+  },
+  "keywords": [
+    "rilievi"
+  ],
+  "author": "Stefirca",
+  "license": "ISC"
+}

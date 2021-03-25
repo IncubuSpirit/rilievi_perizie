@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <title>Rilievi e Perizie</title>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css">
+  <link rel="stylesheet" href="css/manage.css">
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+
+  <script src="js/manage.js"></script>
+  <script src="js/library.js"></script>
+</head>
+
+<body>
+  <div id="page">
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="btn btn-outline-info" href="index.html" title="Reload">Home</a>
+          </li>
+          <li class="nav-item active" style="margin-left: 1em">
+            <a class="btn btn-outline-success" href="newUser.html">New User</a>
+          </li>
+          <li class="nav-item active" style="margin-left: 1em">
+            <a class="btn btn-outline-warning" href="manage.html">Manage</a>
+          </li>
+        </ul>
+        <ul id="btnContainer" class="ul-inline my-2 my-lg-0 navbar-nav mr-auto" style="position:absolute; left: 92%;">
+          <li class="btn btn-outline-danger" id="logout">Logout</li>
+        </ul>
+      </div>
+    </nav>
+    <!--Navbar-->
+
+    <br>
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-6">
+        <h1 id="title">Users</h1>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <hr>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-7">
+        <table class="table">
+          <thead id="tHead" class="thead-dark">
+            <tr>
+              <th>Username</th>
+              <th>Name</th>
+              <th>Surname</th>
+              <th>Email</th>
+              <th>Gender</th>
+              <th>isAdmin</th>
+            </tr>
+          </thead>
+          <tbody id="tBody" style="cursor:pointer"></tbody>
+        </table>
+      </div>
+      <div class="col-md-3" id="infoDiv">
+        <label for="txtUsername">Username:</label>
+        <input disabled id="txtUsername" style="display: inline;" type="text" class="form-control" placeholder="Username">
+        <br><br>
+        <label for="txtName">Name:</label>
+        <input id="txtName" style="display: inline;" type="text" class="form-control" placeholder="Name">
+        <br>
+        <label for="txtSurname">Surname:</label>
+        <input id="txtSurname" style="display: inline;" type="text" class="form-control" placeholder="Surname">
+        <br>
+        <label for="txtEmail">Email:</label>
+        <input id="txtEmail" style="display: inline;" type="text" class="form-control" placeholder="Email">
+        <br>
+        <label for="txtPassword">Password:</label>
+        <input id="txtPassword" style="display: inline;" type="text" class="form-control" placeholder="Password">
+        <br>
+        <br>
+        <label for="rdbAdmin">Admin</label>
+        <input id="rdbAdmin" name="userType" type="radio" value="Admin">
+        &nbsp;&nbsp;&nbsp;
+        <label for="rdbUser">User</label>
+        <input id="rdbUser" name="userType" type="radio" value="User">
+        <br>
+        <br>
+        <label for="rdbM">M</label>
+        <input id="rdbM" name="genderType" type="radio" value="M">
+        &nbsp;&nbsp;&nbsp;
+        <label for="rdbF">F</label>
+        <input id="rdbF" name="genderType" type="radio" value="F">
+        <br>
+        <br>
+        <button type="button" class="btn btn-warning" id="changeUserPassword">Regenerate User Password</button>
+        <br>
+        <button type="button" class="btn btn-info" id="updateUser">Update User</button>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+</body>
+
+</html>
